@@ -1,8 +1,3 @@
-library(tidyverse) # Installing packages required for the function
-library(testthat)
-library(roxygen2)
-library(ggplot2)
-
 #' @title Quadrat Sample Generator
 #' @description Function randomly selects the desired number of quadrats to be sampled based
 #' on the given dimensions of the gridded study site, and plots a map showing
@@ -11,10 +6,12 @@ library(ggplot2)
 #' @param height Integer for the height of the grid in the sampling area (in quadrats).
 #' @param width Integer with the width of the grid in the sampling area (in quadrats).
 #' @param n_quadrats Integer with the number quadrats to be sampled.
-#' @returns A plot showing which quadrats to randomly sample in the specific grid.
+#' @return A plot showing which quadrats to randomly sample in the specific grid.
 #' @examples
-#' quadrat_sample_generator(11, 10, 6)
-#' quadrat_sample_generator (height = 5, width = 5, n_quadrats = 3)
+#' QuadratSampleGenerator(11, 10, 6)
+#' QuadratSampleGenerator (height = 5, width = 5, n_quadrats = 3)
+#' @import ggplot2
+#' @importFrom tidyr expand_grid
 #' @export
 
 
@@ -41,8 +38,8 @@ QuadratSampleGenerator <- function(height, width, n_quadrats) {
   }
 
   # Creates a grid using the dimensions given
-  grid <- expand_grid(height = 1:height,
-                      width = 1:width)
+  grid <- tidyr::expand_grid(height = 1:height,
+                             width = 1:width)
 
   # Randomly select quadrats
   samples <- sample(1:nrow(grid), n_quadrats)
@@ -52,11 +49,11 @@ QuadratSampleGenerator <- function(height, width, n_quadrats) {
   grid$sample[samples] <- "Sampled"
 
   # Plot the map
-  ggplot(grid, aes(x = width, y = height, fill = sample)) +
-    geom_tile(color = "black") + # Outlines quadrats in black
-    scale_fill_manual(values = c("Sampled" = "black", "Unsampled" = "white")) +
-    scale_y_continuous(breaks = c(1:height)) + # Marks each cell given
-    scale_x_continuous(breaks = c(1:width)) +
-    theme_classic()
+  ggplot2::ggplot(grid, ggplot2::aes(x = width, y = height, fill = sample)) +
+    ggplot2::geom_tile(color = "black") + # Outlines quadrats in black
+    ggplot2::scale_fill_manual(values = c("Sampled" = "black", "Unsampled" = "white")) +
+    ggplot2::scale_y_continuous(breaks = c(1:height)) + # Marks each cell given
+    ggplot2::scale_x_continuous(breaks = c(1:width)) +
+    ggplot2::theme_classic()
 }
 

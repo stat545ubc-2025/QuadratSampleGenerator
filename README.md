@@ -1,1 +1,25 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/315-s1UC)
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# QuadratSampleGenerator
+
+Function randomly selects the desired number of quadrats to be sampled
+based on the given dimensions of the gridded study site, and plots a map
+showing use these quadrats. Input should not be a vector (integer value
+only).
+
+## Installation
+
+Package installation can be done directly by calling
+`devtools::install_github("finnes/QuadratSampleGenerator")`
+
+## Example
+
+This is a basic example which shows you how to use the package
+
+``` r
+library(QuadratSampleGenerator)
+QuadratSampleGenerator(width = 5, height = 3, n_quadrats = 4)
+```
+
+<img src="man/figures/README-example-1.png" width="100%" />

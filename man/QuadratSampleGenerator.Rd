@@ -22,6 +22,6 @@ on the given dimensions of the gridded study site, and plots a map showing
 these quadrats. Input should not be a vector (integer value only).
 }
 \examples{
-quadrat_sample_generator(11, 10, 6)
-quadrat_sample_generator (height = 5, width = 5, n_quadrats = 3)
+QuadratSampleGenerator(11, 10, 6)
+QuadratSampleGenerator (height = 5, width = 5, n_quadrats = 3)
 }
