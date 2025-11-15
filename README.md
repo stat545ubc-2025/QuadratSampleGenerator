@@ -5,19 +5,21 @@
 
 Function randomly selects the desired number of quadrats to be sampled
 based on the given dimensions of the gridded study site, and plots a map
-showing use these quadrats. Input should not be a vector (integer value
+showing these quadrats. Input should not be a vector (integer value
 only).
 
 ## Installation
 
 Package installation can be done directly by calling
-`devtools::install_github("finnes/QuadratSampleGenerator")`
+`devtools::install_github("finnes1/QuadratSampleGenerator")`
 
 ## Example
 
 This is a basic example which shows you how to use the package
 
 ``` r
+devtools::load_all(".")
+#> ℹ Loading QuadratSampleGenerator
 library(QuadratSampleGenerator)
 QuadratSampleGenerator(width = 5, height = 3, n_quadrats = 4)
 ```

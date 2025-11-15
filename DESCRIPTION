@@ -5,7 +5,7 @@ Authors@R:
     person("Freya", "Innes", , "finnes@zoology.ubc.ca", role = c("aut", "cre"))
 Description: Function randomly selects the desired number of quadrats to be 
   sampled based on the given dimensions of the gridded study site, and plots a 
-  map showing use these quadrats. Input should not be a vector (integer value only).
+  map showing these quadrats. Input should not be a vector (integer value only).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

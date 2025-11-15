@@ -15,17 +15,20 @@ knitr::opts_chunk$set(
 
 # QuadratSampleGenerator
 
-Function randomly selects the desired number of quadrats to be sampled based on the given dimensions of the gridded study site, and plots a map showing use these quadrats. Input should not be a vector (integer value only).
+Function randomly selects the desired number of quadrats to be sampled based on 
+the given dimensions of the gridded study site, and plots a map showing these 
+quadrats. Input should not be a vector (integer value only).
 
 ## Installation
 
-Package installation can be done directly by calling `devtools::install_github("finnes/QuadratSampleGenerator")`
+Package installation can be done directly by calling `devtools::install_github("finnes1/QuadratSampleGenerator")`
 
 ## Example
 
 This is a basic example which shows you how to use the package
 
 ```{r example}
+devtools::load_all(".")
 library(QuadratSampleGenerator)
 QuadratSampleGenerator(width = 5, height = 3, n_quadrats = 4)
 ```
