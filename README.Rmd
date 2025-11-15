@@ -28,7 +28,7 @@ Package installation can be done directly by calling `devtools::install_github("
 This is a basic example which shows you how to use the package
 
 ```{r example}
-devtools::load_all(".")
+devtools::install_github("finnes1/QuadratSampleGenerator")
 library(QuadratSampleGenerator)
 QuadratSampleGenerator(width = 5, height = 3, n_quadrats = 4)
 ```
