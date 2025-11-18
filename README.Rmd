@@ -21,14 +21,17 @@ quadrats. Input should not be a vector (integer value only).
 
 ## Installation
 
-Package installation can be done directly by calling `devtools::install_github("stat545ubc-2025/QuadratSampleGenerator")`
+Package installation can be done directly by calling 
+
+``` r
+devtools::install_github("stat545ubc-2025/QuadratSampleGenerator")
+```
 
 ## Example
 
 This is a basic example which shows you how to use the package
 
 ```{r example}
-devtools::install_github("stat545ubc-2025/QuadratSampleGenerator")
 library(QuadratSampleGenerator)
 QuadratSampleGenerator(width = 5, height = 3, n_quadrats = 4)
 ```
